@@ -1,11 +1,12 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
+import { LocalService } from './local-service';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   data = [
     {
       id: 1,
@@ -35,4 +36,6 @@ export class AppComponent {
       ],
     },
   ];
+  //constructor(private localService: LocalService) {}
+  ngOnInit() {}
 }

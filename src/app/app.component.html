@@ -1,11 +1,24 @@
+<button>Add New Project</button>
 <ul *ngFor="let group of data; index as i">
-  <span style="color:blue">{{ group.name }}</span>
+  <div style="margin-bottom:10px">
+    <span style=";color:blue">{{ group.name }}</span>
+    <button style="margin-left:10px">Add</button><button>Edit</button
+    ><button>Delete</button>
+  </div>
   <ul>
     <li *ngFor="let item of group.tasks; index as j">
-      <span>{{ item.name }}</span>
+      <div style="margin-bottom:10px">
+        <span>{{ item.name }}</span
+        ><button style="margin-left:10px">Add</button><button>Edit</button
+        ><button>Delete</button>
+      </div>
       <ul>
         <li *ngFor="let child of item.children; index as k">
-          <span>{{ child.name }}</span>
+          <div style="margin-bottom:10px">
+            <span>{{ child.name }}</span>
+            <button style="margin-left:10px">Edit</button
+            ><button>Delete</button>
+          </div>
         </li>
       </ul>
     </li>
